@@ -5,6 +5,7 @@ import sys
 
 
 def main():
+    """Пишем main."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'infra_project.settings')
     try:
         from django.core.management import execute_from_command_line
