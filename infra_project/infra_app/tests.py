@@ -1,14 +1,9 @@
-"""Пишем тесты."""
 from http import HTTPStatus
-
 from django.test import Client, TestCase
 
 
 class StaticPagesURLTests(TestCase):
-    """Описываем класс."""
-
     def setUp(self):
-        """Описываем метод."""
         self.guest_client = Client()
 
     def test_about_url_exists_at_desired_location(self):
@@ -25,4 +20,4 @@ class StaticPagesURLTests(TestCase):
         self.assertContains(response, 'У меня получилось!')
 
         response = self.guest_client.get('/second_page/')
-        self.assertContains(response, 'А это вторая страница!')
+        self.assertContains(response, 'А это вторая страница')
